@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omid Hospital Survey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Vazirmatn', sans-serif !important;
+        background-color: #f0f9ff;
+      }
+      /* Print Styles */
+      @media print {
+        @page {
+          size: A4;
+          margin: 10mm;
+        }
+        body {
+          background-color: white !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .print-only {
+          display: block !important;
+        }
+        .print-header {
+           display: flex !important;
+        }
+        .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl {
+          box-shadow: none !important;
+        }
+        .overflow-y-auto {
+          overflow: visible !important;
+          height: auto !important;
+        }
+        /* Ensure table headers repeat on new pages */
+        thead {
+          display: table-header-group;
+        }
+        tr {
+          page-break-inside: avoid;
+        }
+        /* Charts layout */
+        .recharts-wrapper {
+          width: 100% !important;
+          height: 300px !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "recharts": "https://esm.sh/recharts@^3.5.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.2.7",
+    "axios": "https://esm.sh/axios@^1.13.2",
+    "xlsx": "https://esm.sh/xlsx@^0.18.5",
+    "jalaali-js": "https://esm.sh/jalaali-js@^1.2.8"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

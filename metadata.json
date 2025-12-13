@@ -1,0 +1,5 @@
+{
+  "name": "Omid Hospital Survey",
+  "description": "A comprehensive patient satisfaction survey application for Omid Hospital featuring a Persian RTL interface, survey wizard, and a protected admin dashboard.",
+  "requestFramePermissions": []
+}
