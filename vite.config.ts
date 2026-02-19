@@ -8,10 +8,6 @@ export default defineConfig(({ mode }) => {
     plugins: [react()],
     define: {
       'process.env.API_KEY': JSON.stringify(env.API_KEY)
-    },
-    server: {
-      host: '0.0.0.0',
-      port: 5173,
     }
   };
 });

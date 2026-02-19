@@ -3,15 +3,7 @@ import { SurveySubmission } from '../types.ts';
 
 // Detect environment: Use environment variable, relative path (for production), or localhost (fallback)
 const getBaseUrl = () => {
-  const meta = import.meta as any;
-  if (meta.env && meta.env.VITE_API_URL) {
-    return meta.env.VITE_API_URL;
-  }
-  // If running on same origin (production build served by backend), use relative path
-  if (window.location.origin.includes('localhost') && window.location.port !== '3000') {
-     return 'http://localhost:3000/api'; // Dev mode React usually runs on 5173
-  }
-  return '/api'; // Production default
+  return '/api';
 };
 
 const API_URL = getBaseUrl();
